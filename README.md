@@ -5,42 +5,57 @@
 - CSS flex box appeared in context of solving manual positioning of boxes
 - It's important to understand what problem that the technology has solved, instead of just learning stuff what other people think is valuable.
 
-## Flexbox:
+## Flexbox
 
 - Only talk to the flexbox container outside, don't talk to the children. 
-
 - Direct father controls the positioning of the children content
   ex) .wrapper is father of .box
 
-  ![1*ubDrM-3m22gLF_pZ4DCdMw](https://miro.medium.com/max/2366/1*ubDrM-3m22gLF_pZ4DCdMw.png)
+### Flex-direction and axis
 
-- When flex-direction is row,
+```css
+display:flex 
+```
 
-  - Main axis is x-axis, which is default
-    - justify-content move childrens on main axis
-  - Cross axis is y-axis
-    - align-items move children on cross axis
+display flex sets default flex-direction as row
 
-- 
+### **When flex-direction is row,**
+
+![Basics1](https://mdn.mozillademos.org/files/15649/Basics1.png)
+
+- Main axis is x-axis
+  - justify-content move childrens on main axis
+
+![Basics3](https://mdn.mozillademos.org/files/15616/Basics3.png)
+
+- Cross axis is y-axis
+  - align-items move children on cross axis
+
+### **When flex-direction is column,**
+
+![align10](https://mdn.mozillademos.org/files/15650/align10.png)
+
+- Main axis is y-axis
+  - justify-content move childrens on main axis
+
+![Basics4](https://mdn.mozillademos.org/files/15617/Basics4.png)
+
+- Cross axis is x-axis
+  - align-items move children on cross axis
+
+
+
+## Concepts
 
 - [ ] flex-direction
-
 - [ ] order
-
 - [ ] justify-content
-
 - [ ] align-items
-
 - [ ] align-self
-
 - [ ] flex-wrap
-
 - [ ] align-content
-
 - [ ] flex-grow
-
 - [ ] flex-shrink
-
 - [ ] flex-basis
 
 ## Grid:

@@ -7,15 +7,40 @@
 
 ## Flexbox:
 
+- Only talk to the flexbox container outside, don't talk to the children. 
+
+- Direct father controls the positioning of the children content
+  ex) .wrapper is father of .box
+
+  ![1*ubDrM-3m22gLF_pZ4DCdMw](https://miro.medium.com/max/2366/1*ubDrM-3m22gLF_pZ4DCdMw.png)
+
+- When flex-direction is row,
+
+  - Main axis is x-axis, which is default
+    - justify-content move childrens on main axis
+  - Cross axis is y-axis
+    - align-items move children on cross axis
+
+- 
+
 - [ ] flex-direction
+
 - [ ] order
+
 - [ ] justify-content
+
 - [ ] align-items
+
 - [ ] align-self
+
 - [ ] flex-wrap
+
 - [ ] align-content
+
 - [ ] flex-grow
+
 - [ ] flex-shrink
+
 - [ ] flex-basis
 
 ## Grid:

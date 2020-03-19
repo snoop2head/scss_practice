@@ -14,7 +14,9 @@
 ### Flex-direction and axis
 
 ```css
-display:flex 
+.father {
+	display:flex 
+}
 ```
 
 display flex sets default flex-direction as row
@@ -25,11 +27,13 @@ display flex sets default flex-direction as row
 
 - Main axis is x-axis
   - justify-content move childrens on main axis
+  - or, justify-content modify lines of main axis
 
 ![Basics3](https://mdn.mozillademos.org/files/15616/Basics3.png)
 
 - Cross axis is y-axis
   - align-items move children on cross axis
+  - or, align-items modify lines of cross axis
 
 ### **When flex-direction is column,**
 
@@ -37,30 +41,38 @@ display flex sets default flex-direction as row
 
 - Main axis is y-axis
   - justify-content move childrens on main axis
+  - or, justify-content modify lines of main axis
 
 ![Basics4](https://mdn.mozillademos.org/files/15617/Basics4.png)
 
 - Cross axis is x-axis
   - align-items move children on cross axis
+  - or, align-items modify lines of cross axis
+
+### When flex-direction is row-reverse ( or column reverse)
+
+- Axis is the same, only the left-to-right sequential arraying is inversed as right-to-left.
 
 ### (Flexbox) order
 
 - order is assigned according to main axis, sequentially
-
 - default is 0
 
-  
+### flex-wrap
+
+- wrap means to respect the size of the children
+- nowrap means cram everyting in one father (line), regardless of shrinking sizes of children
 
 
 
 ## Concepts
 
 - [x] flex-direction
-- [ ] order
-- [ ] justify-content
-- [ ] align-items
+- [x] order
+- [x] justify-content
+- [x] align-items
 - [ ] align-self
-- [ ] flex-wrap
+- [x] flex-wrap
 - [ ] align-content
 - [ ] flex-grow
 - [ ] flex-shrink

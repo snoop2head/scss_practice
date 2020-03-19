@@ -1,8 +1,10 @@
 .father {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
-  height: 100vh;
+  align-content: flex-start;
+  height: 200vh;
+  flex-wrap: wrap;
 }
 
 /* first box */
@@ -11,17 +13,21 @@
   height: 200px;
   background: peru;
   color: white;
-  order: 2;
+  /* order: 2; */
+  /* centering texts */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* second box */
 .child:nth-child(2) {
-  align-self: center;
-  order: 3;
+  /* align-self: center; */
+  /* order: 3; */
 }
 
 /* third box */
 .child:nth-child(3) {
-  align-self: flex-end;
-  order: 0;
+  /* align-self: flex-end; */
+  /* order: 0; */
 }

@@ -267,7 +267,46 @@ display flex sets default flex-direction as row
 
 - Matching grid-area value to grid-template-areas value in father. NOT BY CLASS NAMES!
 
+### grid-column and grid-row
 
+```css
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+}
+
+.header {
+  background-color: gold;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.content {
+  background-color: greenyellow;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.nav {
+  background-color: orange;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.footer {
+  background-color: purple;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+```
+
+![image-20200319201932056](image-20200319201932056.png)
+
+- stretching elements from (#white-line-number) to (#white-line-number)
 
 ## Concepts
 
@@ -275,7 +314,7 @@ display flex sets default flex-direction as row
 - [x] order
 - [x] justify-content
 - [x] align-items
-- [ ] align-self
+- [x] align-self
 - [x] flex-wrap
 - [x] align-content
 - [x] flex-grow

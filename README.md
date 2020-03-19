@@ -403,7 +403,9 @@ display flex sets default flex-direction as row
 
 
 
-### Moving contents within grid: justify-items & align-items
+### justify-items & align-items: moving contents within grid
+
+![image-20200320010405495](image-20200320010405495.png)
 
 ```css
 .grid {
@@ -431,7 +433,7 @@ display flex sets default flex-direction as row
 
 
 
-### Moving grids as a whole: justify-content & align-content
+### justify-content & align-content Moving grids as a whole
 
 ```css
 .grid {
@@ -471,9 +473,72 @@ display flex sets default flex-direction as row
 
 - shortcut for align-content & justify-content
 
+### align-self,  justify-self, place-self
 
+![image-20200320010117601](image-20200320010117601.png)
 
+```css
+.item:nth-child(odd) {
+  background-color: #2ecc71;
+  align-self: end;
+  justify-self: center;
+  /* place-self: end center */
+}
+```
 
+- applying only to child grid itself and content within
+
+### grid-auto-rows
+
+![image-20200320010849346](image-20200320010849346.png)
+
+```css
+.grid {
+  background: black;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4, 100px);
+  /* grid-template-rows: repeat(4, 100px); */
+  grid-auto-rows: 100px;
+}
+```
+
+- You don't know how much row of grids you should prepare in order to hold data from the server
+- content numbers > rows -> disaster!
+- So automatically prepare rows
+
+### grid-auto-flow
+
+![image-20200320011123184](image-20200320011123184.png)
+
+```css
+.grid {
+  background: black;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  grid-auto-flow: column;
+}
+```
+
+- whenever more divs in html than prepared in css, you can place overflowed item to row / column direction
+  - column is horizontally arraying direction -> gallery of photos
+  - row is vertically arraying direction -> usually used
+
+### grid-auto-columns
+
+![image-20200320011444273](image-20200320011444273.png)
+
+```css
+.grid {
+  ...
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
+}
+```
+
+- Used along with grid-auto-flow, keeping size still for overflowed arrayed elements 
 
 ## Concepts
 
@@ -506,15 +571,15 @@ display flex sets default flex-direction as row
 - [x] justify-items
 - [x] align-items
 - [x] place-items
-- [ ] justify-content
-- [ ] align-content
-- [ ] place-content
-- [ ] justify-self
-- [ ] align-self
-- [ ] place-self
-- [ ] grid-auto-rows
-- [ ] grid-auto-flow
-- [ ] grid-auto-columns
+- [x] justify-content
+- [x] align-content
+- [x] place-content
+- [x] justify-self
+- [x] align-self
+- [x] place-self
+- [x] grid-auto-rows
+- [x] grid-auto-flow
+- [x] grid-auto-columns
 
 ### Keywords & Functions:
 

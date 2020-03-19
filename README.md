@@ -1,5 +1,12 @@
 # CSS/SCSS Layout: Flexbox & Grid
 
+### Tip
+
+- Just inspect element whenever problem arose
+- Put cursor on the top of CSS class names, instead of memorizing stuffs
+
+### Studying Tip
+
 - CSS flex box appeared in context of solving manual positioning of boxes
 - It's important to understand what problem that the technology has solved, instead of just learning stuff what other people think is valuable.
 
@@ -354,7 +361,7 @@ display flex sets default flex-direction as row
 
 - **Takes in from the size of the grid itself: width and height**
 - Sizing columns as 100 px will be too big on phone
-- Thus, instead of px, we use % or fraction instead: proportion stays
+- **fr and % are both proportional to window size**
 
 ### grid-template and fr
 
@@ -394,6 +401,8 @@ display flex sets default flex-direction as row
 }
 ```
 
+
+
 ### Moving contents within grid: justify-items & align-items
 
 ```css
@@ -419,6 +428,48 @@ display flex sets default flex-direction as row
 ```
 
 - Shortcut for align-items and justify-contents
+
+
+
+### Moving grids as a whole: justify-content & align-content
+
+```css
+.grid {
+  background: black;
+  display: grid;
+  gap: 10px;
+  height: 250vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+	align-content: end;
+  justify-content: space-evenly;
+}
+```
+
+![image-20200320004540832](image-20200320004540832.png)
+
+- Grid container is 100% width, which is black background on the image
+- justify-content and align-content moves **whole grid** within grid container.
+- It is different from justify-items and align-items, since 
+  -items **only move contents within individual grids.**
+
+### place-content
+
+```css
+.grid {
+  background: black;
+  display: grid;
+  gap: 10px;
+  height: 250vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  /* align-content: end;
+  justify-content: space-evenly; */
+  place-content: end space-evenly;
+}
+```
+
+- shortcut for align-content & justify-content
 
 
 
@@ -452,9 +503,9 @@ display flex sets default flex-direction as row
 - [x] grid-column
 - [x] grid-row
 - [x] grid-template
-- [ ] justify-items
-- [ ] align-items
-- [ ] place-items
+- [x] justify-items
+- [x] align-items
+- [x] place-items
 - [ ] justify-content
 - [ ] align-content
 - [ ] place-content

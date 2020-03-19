@@ -1,10 +1,10 @@
 .father {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: flex-start;
   height: 200vh;
-  flex-wrap: wrap;
+  flex-wrap: unwrap;
 }
 
 /* first box */
@@ -18,16 +18,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
 }
 
 /* second box */
 .child:nth-child(2) {
-  /* align-self: center; */
-  /* order: 3; */
+  background-color: black;
+  flex-grow: 4;
 }
 
-/* third box */
 .child:nth-child(3) {
-  /* align-self: flex-end; */
-  /* order: 0; */
+  background-color: peru;
+  flex-grow: 1;
 }

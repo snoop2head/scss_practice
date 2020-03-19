@@ -60,8 +60,56 @@ display flex sets default flex-direction as row
 
 ### flex-wrap
 
-- wrap means to respect the size of the children
-- nowrap means cram everyting in one father (line), regardless of shrinking sizes of children
+- wrap means to respect the size of the children, when window ran out of spaces
+- nowrap means cram everyting in one father (line), even if sizes of children are shrunk
+
+### flex-shrink
+
+- enabled only when father doesn't respect the size of children
+
+```css
+.father {
+	flex-wrap: unwrap;
+}
+```
+
+- kicks in when window ran out of spaces
+- default value is 1
+- flex-shrink value 2 means it is 200% more likely to shrink than the other children
+
+```css
+.child{
+  flex-shrink: 2;
+}
+```
+
+### flex-grow
+
+- enabled only when father doesn't respect the size of children
+
+```css
+.father {
+	flex-wrap: unwrap;
+}
+```
+
+- takes the space that is available to grow in the window
+- default value is 0, which means that child will keep its size, doesn't take space that is available to grow
+- flex-grow value 1 and 2 is proportional to each other: it grows twice more than the other children
+
+```css
+.child{
+  flex-grow: 1;
+}
+
+.child:nth-child(2) {
+  flex-grow: 2;
+}
+
+.child:nth-child(3) {
+  flex-grow: 1;
+}
+```
 
 
 

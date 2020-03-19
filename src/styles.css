@@ -6,30 +6,24 @@ body {
 .grid {
   display: grid;
   gap: 10px;
-  width: 100wh;
-  height: 100vh;
-  grid-template:
-    "header header header header" 1fr
-    "content content content nav" 2fr
-    "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr;
+  height: 50vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  place-items: end stretch;
 }
 
 .header {
   background-color: gold;
-  grid-area: header;
 }
 
 .content {
   background-color: greenyellow;
-  grid-area: content;
 }
 
 .nav {
   background-color: orange;
-  grid-area: nav;
 }
 
 .footer {
   background-color: purple;
-  grid-area: footer;
 }

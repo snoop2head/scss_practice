@@ -232,7 +232,7 @@ display flex sets default flex-direction as row
 - gap between grids are written as column-gap, row-gap
 - writing "gap" standalone is for both column-gap and row-gap
 
-### grid Template Areas 
+### grid template Areas 
 
 ```css
 .grid {
@@ -356,6 +356,8 @@ display flex sets default flex-direction as row
 - Sizing columns as 100 px will be too big on phone
 - Thus, instead of px, we use % or fraction instead: proportion stays
 
+### grid-template and fr
+
 ```css
 .grid {
   display: grid;
@@ -392,7 +394,31 @@ display flex sets default flex-direction as row
 }
 ```
 
+### Moving contents within grid: justify-items & align-items
 
+```css
+.grid {
+  display: grid;
+  align-items: end;
+  justify-items: stretch;
+}
+```
+
+- In html, needs to have some contents(like letters) to move items within cell along axis
+  - main axis is fixed as x-axis, cross axis is fixed as y-axis
+  - justify-content is horizontal, align-items is vertical
+- default value is stretch: stretching along the axis
+
+### place-items
+
+```css
+.grid {
+  display: grid;
+  place-items: end stretch;
+}
+```
+
+- Shortcut for align-items and justify-contents
 
 
 
@@ -425,7 +451,7 @@ display flex sets default flex-direction as row
 - [x] grid-row-end
 - [x] grid-column
 - [x] grid-row
-- [ ] grid-template
+- [x] grid-template
 - [ ] justify-items
 - [ ] align-items
 - [ ] place-items

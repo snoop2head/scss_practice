@@ -279,34 +279,64 @@ display flex sets default flex-direction as row
 
 .header {
   background-color: gold;
-  grid-column-start: 1;
-  grid-column-end: 5;
+  /* grid-column-start: 1;
+  grid-column-end: 5;*/ 
+  
+  /* grid-column: 1 / 5; */
+	
+  grid-column: 1 / -1;
 }
 
 .content {
   background-color: greenyellow;
-  grid-column-start: 1;
+  /*grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 2;
-  grid-row-end: 4;
+  grid-row-end: 4;*/
+  
+  /* grid-column: 1 / 4;
+  grid-row: 2 / 4; */
+  
+  grid-column: 1 / -2;
+  grid-row: 2 / span 2;
 }
 
 .nav {
   background-color: orange;
-  grid-row-start: 2;
-  grid-row-end: 4;
+	/* grid-row-start: 2;
+  grid-row-end: 4; */
+
+  /* grid-row: 2 / 4; */
+  
+  grid-row: 2 / span 2;
 }
 
 .footer {
   background-color: purple;
-  grid-column-start: 1;
-  grid-column-end: 5;
+  /* grid-column-start: 1;
+  grid-column-end: 5; */
+  
+  /* grid-column: 1 / 5; */
+  
+  grid-column: span 4;
 }
 ```
 
 ![image-20200319201932056](image-20200319201932056.png)
 
-- stretching elements from (#white-line-number) to (#white-line-number)
+**Nominating & Stretching with starting line and end line**
+
+- stretching elements from start (#white-line-number) to end (#white-line-number)
+- abbreviaiton with (starting line) / (end line)
+- you can count lines from beginning as 1, 2, 3 ...
+- you can count from the end as -1, -2, -3 ...
+
+**Stretching with numbers of cells**
+
+- stretching elements with span (space numbers)
+- you can mix with starting line and end line
+
+
 
 ## Concepts
 
@@ -329,12 +359,12 @@ display flex sets default flex-direction as row
 - [x] row-gap
 - [x] gap
 - [x] grid-template-areas
-- [ ] grid-column-start
-- [ ] grid-column-end
-- [ ] grid-row-start
-- [ ] grid-row-end
-- [ ] grid-column
-- [ ] grid-row
+- [x] grid-column-start
+- [x] grid-column-end
+- [x] grid-row-start
+- [x] grid-row-end
+- [x] grid-column
+- [x] grid-row
 - [ ] grid-template
 - [ ] justify-items
 - [ ] align-items

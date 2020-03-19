@@ -12,26 +12,21 @@ body {
 
 .header {
   background-color: gold;
-  grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column: 1 / -1;
 }
 
 .content {
   background-color: greenyellow;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  grid-column: 1 / -2;
+  grid-row: 2 / span 2;
 }
 
 .nav {
   background-color: orange;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  grid-row: 2 / span 2;
 }
 
 .footer {
   background-color: purple;
-  grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column: span 4;
 }

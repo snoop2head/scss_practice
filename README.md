@@ -49,18 +49,21 @@ display flex sets default flex-direction as row
   - align-items move children on cross axis
   - or, align-items modify lines of cross axis
 
+- justify-content & align-items can be used in any elements: it affects subordinated children elements. 
+
 ### When flex-direction is row-reverse ( or column reverse)
 
 - Axis is the same, only the left-to-right sequential arraying is inversed as right-to-left.
 
 ### (Flexbox) order
 
-- order is assigned according to main axis, sequentially
+- order is sequentially assigning according to main axis
 - default is 0
 
 ### flex-wrap
 
 - wrap means to respect the size of the children, when window ran out of spaces
+- default value is flex-wrap: wrap
 - nowrap means cram everyting in one father (line), even if sizes of children are shrunk
 
 ### flex-shrink
@@ -73,7 +76,7 @@ display flex sets default flex-direction as row
 }
 ```
 
-- kicks in when window ran out of spaces
+- kicks in when window ran out of spaces, according to the main-axis
 - default value is 1
 - flex-shrink value 2 means it is 200% more likely to shrink than the other children
 
@@ -85,15 +88,9 @@ display flex sets default flex-direction as row
 
 ### flex-grow
 
-- enabled only when father doesn't respect the size of children
+- enabled regardless of flex-wrap.
+- flex-grow takes the space that is available to grow in the window, according to the main-axis
 
-```css
-.father {
-	flex-wrap: unwrap;
-}
-```
-
-- takes the space that is available to grow in the window
 - default value is 0, which means that child will keep its size, doesn't take space that is available to grow
 - flex-grow value 1 and 2 is proportional to each other: it grows twice more than the other children
 
@@ -113,6 +110,28 @@ display flex sets default flex-direction as row
 
 
 
+### flex-basis
+
+- Sizing element according to the main-axis of the father flexbox
+- flex-basis % is percentage of size of father flexbox
+  ex: if father flexbox width is 100wh and if child's flex-basis is 30%, then size of the child will be 30wh
+- You can also give fixed pixel values to the child box
+
+```css
+.father {
+  display: flex;
+  flex-direction: row;
+  width: 100wh;
+}
+
+.child {
+  flex-basis: 30%;
+  /* flex-basis: 100px; */
+}
+```
+
+
+
 ## Concepts
 
 - [x] flex-direction
@@ -121,10 +140,10 @@ display flex sets default flex-direction as row
 - [x] align-items
 - [ ] align-self
 - [x] flex-wrap
-- [ ] align-content
-- [ ] flex-grow
-- [ ] flex-shrink
-- [ ] flex-basis
+- [x] align-content
+- [x] flex-grow
+- [x] flex-shrink
+- [x] flex-basis
 
 ## Grid:
 
@@ -185,4 +204,10 @@ display flex sets default flex-direction as row
 - [ ] [http://donicaida.com/](http://donicaida.com/)
 - [ ] [https://canalstreet.market/](https://canalstreet.market/)
 - [ ] [https://wonhundred.com/](https://wonhundred.com/)
+
+
+
+## My Questions
+
+- [CSS Units - What is the difference between vh/vw and %?](https://stackoverflow.com/questions/31039979/css-units-what-is-the-difference-between-vh-vw-and)]
 

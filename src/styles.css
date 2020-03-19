@@ -1,33 +1,28 @@
 .father {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-content: flex-start;
-  height: 200vh;
-  flex-wrap: unwrap;
+  width: 100wh;
+  height: 100vh;
+  justify-content: center;
 }
 
 /* first box */
 .child {
-  width: 200px;
-  height: 200px;
+  flex-basis: 20%;
   background: peru;
   color: white;
-  /* order: 2; */
+
   /* centering texts */
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
 }
 
 /* second box */
 .child:nth-child(2) {
   background-color: black;
-  flex-grow: 4;
 }
 
 .child:nth-child(3) {
   background-color: peru;
-  flex-grow: 1;
 }

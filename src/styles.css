@@ -1,28 +1,31 @@
 .father {
-  display: flex;
-  flex-direction: row;
-  width: 100wh;
-  height: 100vh;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 250px 250px 250px;
+  /* column-gap: 10px;
+  row-gap: 10px; */
+  gap: 10px;
+  grid-template-rows: 100px 50px 300px;
 }
 
-/* first box */
 .child {
-  flex-basis: 20%;
+  flex-basis: 300px;
   background: peru;
   color: white;
-
-  /* centering texts */
+  /* texts related stuff */
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 50px;
 }
 
-/* second box */
 .child:nth-child(2) {
   background-color: black;
 }
 
 .child:nth-child(3) {
   background-color: peru;
+}
+
+.child:nth-child(4) {
+  background-color: black;
 }

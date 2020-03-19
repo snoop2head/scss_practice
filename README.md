@@ -205,6 +205,18 @@ display flex sets default flex-direction as row
 
 
 
+## Grid
+
+```css
+.father {
+  display: grid;
+}
+```
+
+usually talking to father, not to children
+
+
+
 ## Concepts
 
 - [x] flex-direction

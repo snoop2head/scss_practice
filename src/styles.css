@@ -1,31 +1,35 @@
-.father {
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.grid {
   display: grid;
-  grid-template-columns: 250px 250px 250px;
-  /* column-gap: 10px;
-  row-gap: 10px; */
-  gap: 10px;
-  grid-template-rows: 100px 50px 300px;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: 100px repeat(2, 200px) 100px;
+  grid-template-areas:
+    "header header header header"
+    "content content . nav"
+    "content content . nav"
+    "footer footer footer footer";
 }
 
-.child {
-  flex-basis: 300px;
-  background: peru;
-  color: white;
-  /* texts related stuff */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 50px;
+.header {
+  background-color: gold;
+  grid-area: header;
 }
 
-.child:nth-child(2) {
-  background-color: black;
+.content {
+  background-color: greenyellow;
+  grid-area: content;
 }
 
-.child:nth-child(3) {
-  background-color: peru;
+.nav {
+  background-color: orange;
+  grid-area: nav;
 }
 
-.child:nth-child(4) {
-  background-color: black;
+.footer {
+  background-color: purple;
+  grid-area: footer;
 }

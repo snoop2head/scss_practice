@@ -213,7 +213,59 @@ display flex sets default flex-direction as row
 }
 ```
 
-usually talking to father, not to children
+- usually talking to father, not to children
+- Making table - like grid layout
+
+### Grid-template-rows, Grid-template-columns, Grid column-gap, Grid row-gap
+
+```css
+.grid{
+	display: grid;
+  grid-template-columns: 250px 250px 250px;
+  grid-template-rows: 100px 50px 300px;
+  column-gap: 5px;
+  row-gap: 10px;
+}
+```
+
+
+
+### Grid Template Areas 
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: 100px repeat(2, 200px) 100px;
+  grid-template-areas:
+    "header header header header"
+    "content content . nav"
+    "content content . nav"
+    "footer footer footer footer";
+}
+
+.header {
+  background-color: gold;
+  grid-area: header;
+}
+
+.content {
+  background-color: greenyellow;
+  grid-area: content;
+}
+
+.nav {
+  background-color: orange;
+  grid-area: nav;
+}
+
+.footer {
+  background-color: purple;
+  grid-area: footer;
+}
+```
+
+- Matching grid-area value to grid-template-areas value in father. NOT BY CLASS NAMES!
 
 
 
@@ -232,12 +284,12 @@ usually talking to father, not to children
 
 ## Grid:
 
-- [ ] grid-template-columns
-- [ ] grid-template-rows
-- [ ] column-gap
-- [ ] row-gap
-- [ ] gap
-- [ ] grid-template-areas
+- [x] grid-template-columns
+- [x] grid-template-rows
+- [x] column-gap
+- [x] row-gap
+- [x] gap
+- [x] grid-template-areas
 - [ ] grid-column-start
 - [ ] grid-column-end
 - [ ] grid-row-start

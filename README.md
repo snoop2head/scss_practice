@@ -213,10 +213,11 @@ display flex sets default flex-direction as row
 }
 ```
 
+- Flex is only columns: one dimensional layout.
+- Grid is two dimensional: you can create  table-like  grid layout
 - usually talking to father, not to children
-- Making table - like grid layout
 
-### Grid-template-rows, Grid-template-columns, Grid column-gap, Grid row-gap
+### grid-template-rows, grid-template-columns, grid column-gap, grid row-gap
 
 ```css
 .grid{
@@ -228,9 +229,10 @@ display flex sets default flex-direction as row
 }
 ```
 
+- gap between grids are written as column-gap, row-gap
+- writing "gap" standalone is for both column-gap and row-gap
 
-
-### Grid Template Areas 
+### grid Template Areas 
 
 ```css
 .grid {
@@ -238,6 +240,7 @@ display flex sets default flex-direction as row
   grid-template-columns: repeat(4, 200px);
   grid-template-rows: 100px repeat(2, 200px) 100px;
   grid-template-areas:
+    /* row names and aligning */
     "header header header header"
     "content content . nav"
     "content content . nav"
@@ -338,6 +341,63 @@ display flex sets default flex-direction as row
 
 
 
+### **fr(fraction)**
+
+```css
+.grid {
+  display: grid;
+  width: 500px;
+  height: 50vh;
+  grid-template-columns: 1fr, 1fr, 1fr, 1fr
+}
+```
+
+- **Takes in from the size of the grid itself: width and height**
+- Sizing columns as 100 px will be too big on phone
+- Thus, instead of px, we use % or fraction instead: proportion stays
+
+```css
+.grid {
+  display: grid;
+  gap: 10px;
+  width: 100wh;
+  height: 100vh;
+  grid-template:
+    /* naming each of cells */
+    "header header header header" 1fr /* 1fr is how tall the cells are */
+    "content content content nav" 2fr 
+    "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr; 
+  																		/* width of cells in each 4 rows*/
+  																    /* 4 rows: 1fr + 2fr + 1fr */
+}
+
+.header {
+  background-color: gold;
+  grid-area: header;
+}
+
+.content {
+  background-color: greenyellow;
+  grid-area: content;
+}
+
+.nav {
+  background-color: orange;
+  grid-area: nav;
+}
+
+.footer {
+  background-color: purple;
+  grid-area: footer;
+}
+```
+
+
+
+
+
+
+
 ## Concepts
 
 - [x] flex-direction
@@ -381,8 +441,8 @@ display flex sets default flex-direction as row
 
 ### Keywords & Functions:
 
-- [ ] repeat
-- [ ] fr
+- [x] repeat
+- [x] fr
 - [ ] minmax
 - [ ] auto-fit
 - [ ] auto-fill

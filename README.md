@@ -43,11 +43,19 @@ display flex sets default flex-direction as row
 - Cross axis is x-axis
   - align-items move children on cross axis
 
+### (Flexbox) order
+
+- order is assigned according to main axis, sequentially
+
+- default is 0
+
+  
+
 
 
 ## Concepts
 
-- [ ] flex-direction
+- [x] flex-direction
 - [ ] order
 - [ ] justify-content
 - [ ] align-items

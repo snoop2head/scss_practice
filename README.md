@@ -214,6 +214,8 @@ display flex sets default flex-direction as row
 
 ## Grid
 
+## [🌱 Practice at Grid Garden 🌱](https://cssgridgarden.com/)
+
 ```css
 .father {
   display: grid;
@@ -224,7 +226,9 @@ display flex sets default flex-direction as row
 - Grid is two dimensional: you can create  table-like  grid layout
 - usually talking to father, not to children
 
-### grid-template-rows, grid-template-columns, grid column-gap, grid row-gap
+### [grid-template-columns, grid-template-rows](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template)
+
+### grid column-gap, grid row-gap
 
 ```css
 .grid{
@@ -239,7 +243,7 @@ display flex sets default flex-direction as row
 - gap between grids are written as column-gap, row-gap
 - writing "gap" standalone is for both column-gap and row-gap
 
-### grid template Areas 
+### grid-template-areas 
 
 ```css
 .grid {
@@ -334,12 +338,14 @@ display flex sets default flex-direction as row
 
 ![note_img/image-20200319201932056](note_img/image-20200319201932056.png)
 
-**Nominating & Stretching with starting line and end line**
+**Nominating & Stretching with # starting line and # end line**
 
 - stretching elements from start (#white-line-number) to end (#white-line-number)
 - abbreviaiton with (starting line) / (end line)
 - you can count lines from beginning as 1, 2, 3 ...
+  - left border line is 1: start line
 - you can count from the end as -1, -2, -3 ...
+  - right border line is -1: end line
 
 **Stretching with numbers of cells**
 

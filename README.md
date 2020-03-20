@@ -633,9 +633,7 @@ display flex sets default flex-direction as row
 - SCSS & Saas is compiled into CSS
 - with SCSS, you can make CSS like a programming language
 
-### Initialize with npm and yarn
-
-1. [Initialize gulp](https://youtu.be/DT5uy4n28p8?t=349)
+### [Initialize with npm and yarn](https://youtu.be/DT5uy4n28p8?t=349)
 
 ```shell
 npm init
@@ -645,14 +643,38 @@ npx -p touch nodetouch gulpfile.js
 ```
 
 ```shell
+yarn init
 yarn add @babel/{register,core}
 yarn add @babel/preset-env
 yarn add gulp gulp-sass gulp-csso node-sass gulp-autoprefixer del -D
 ```
 
-2. [adding babel to project instruction](https://academy.nomadcoders.co/courses/575403/lectures/10361247)
+### [Adding babel to project instruction](https://www.youtube.com/watch?v=pd210a1Tl74&feature=emb_title)
 
+- add script to package.json
 
+```json
+"scripts": {
+    "dev": "gulp dev"
+  },
+```
+
+- manually make babelrc file
+
+```javascript
+{
+  "presets": ["@babel/preset-env"]
+}
+```
+
+- change (previously created) gulpfile.js -> gulpfile.babel.js
+
+### Testing Environment setup
+
+```shell
+gulp dev
+yarn dev
+```
 
 
 

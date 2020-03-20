@@ -123,7 +123,7 @@ CSS
 - Targeting div class(= "box") element parellelly 
   - scss code above is compiled into css code below
 
-### Mixins
+### @Mixin
 
 ![image-20200320211917072](image-20200320211917072.png)
 
@@ -158,6 +158,43 @@ a {
   }
 }
 ```
+
+### @Extend
+
+_buttons.scss
+
+```scss
+%button {
+  font-family: inherit;
+  border-radius: 7px;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  background-color: peru;
+  color: white;
+  font-weight: 500;
+}
+```
+
+styles.scss
+
+```scss
+@import "_buttons";
+
+a {
+  @extend %button;
+  text-decoration: none;
+}
+button {
+  @extend %button;
+  border: none;
+}
+```
+
+- Write common design in _<file_name>.scss, extend it to styles.scss
+- Import common design from <file_name>, add some customizations.
+
+
 
 
 

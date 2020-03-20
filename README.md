@@ -65,8 +65,8 @@
 
 - [x] Variables
 - [x] Nesting
-- [x] Mixins
-- [ ] Extend
+- [x] @mixin
+- [x] @extend
 - [ ] Responsive Mixins
 
 ## [4. Cloning]()

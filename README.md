@@ -14,7 +14,7 @@
 
 ### [🐸 Practice at flexboxfroggy! 🐸](https://flexboxfroggy.com/)
 
-- Only talk to the flexbox container outside, don't talk to the children. 
+- Only talk to the flexbox container outside, don't talk to the children.
 - Direct father controls the positioning of the children content
   ex) .wrapper is father of .box
 
@@ -22,7 +22,7 @@
 
 ```css
 .father {
-	display:flex 
+  display: flex;
 }
 ```
 
@@ -32,7 +32,7 @@ display flex sets default flex-direction as row
 
 ```css
 .father {
-	display:flex;
+  display: flex;
   flex-direction: row;
 }
 ```
@@ -51,7 +51,7 @@ display flex sets default flex-direction as row
 
 ```css
 .father {
-	display:flex;
+  display: flex;
   flex-direction: column;
 }
 ```
@@ -64,32 +64,33 @@ display flex sets default flex-direction as row
 ![Basics4](https://mdn.mozillademos.org/files/15617/Basics4.png)
 
 - Cross axis is x-axis
+
   - align-items move children on cross axis (= align-items modify lines of cross axis)
-  
-- justify-content & align-items can be used in any elements: it affects subordinated children elements. 
+
+- justify-content & align-items can be used in any elements: it affects subordinated children elements.
 
 ### When flex-direction is row-reverse ( or column reverse)
 
 ```css
 .father {
-	display:flex;
+  display: flex;
   flex-direction: row-reverse;
- 	/*flex-direction: column-reverse;*/
+  /*flex-direction: column-reverse;*/
 }
 ```
 
-- Axis layout is the same. 
+- Axis layout is the same.
 - Only left-to-right sequential arraying is reversed as right-to-left.
 
 ### [align-self](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
 
 ```css
 .father {
-	display:flex;
+  display: flex;
   flex-direction: flex-start;
 }
 
-.yellow{
+.yellow {
   align-self: flex-end;
 }
 ```
@@ -103,9 +104,9 @@ display flex sets default flex-direction as row
 
 ```css
 .father {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
-  align-content: space-between
+  align-content: space-between;
 }
 ```
 
@@ -141,7 +142,7 @@ display flex sets default flex-direction as row
 
 ```css
 .father {
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 ```
 
@@ -155,10 +156,10 @@ display flex sets default flex-direction as row
 
 ```css
 .father {
-	flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
-.child{
+.child {
   flex-shrink: 2;
 }
 ```
@@ -171,7 +172,7 @@ display flex sets default flex-direction as row
 ### flex-grow
 
 ```css
-.child{
+.child {
   flex-grow: 1;
 }
 
@@ -210,8 +211,6 @@ display flex sets default flex-direction as row
   ex: if father flexbox width is 100wh and if child's flex-basis is 30%, then size of the child will be 30wh
 - You can also give fixed pixel values to the child box
 
-
-
 ## Grid
 
 ## [🌱 Practice at Grid Garden 🌱](https://cssgridgarden.com/)
@@ -223,7 +222,7 @@ display flex sets default flex-direction as row
 ```
 
 - Flex is only columns: one dimensional layout.
-- Grid is two dimensional: you can create  table-like  grid layout
+- Grid is two dimensional: you can create table-like grid layout
 - usually talking to father, not to children
 
 ### [grid-template-columns, grid-template-rows](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template)
@@ -231,8 +230,8 @@ display flex sets default flex-direction as row
 ### grid column-gap, grid row-gap
 
 ```css
-.grid{
-	display: grid;
+.grid {
+  display: grid;
   grid-template-columns: 250px 250px 250px;
   grid-template-rows: 100px 50px 300px;
   column-gap: 5px;
@@ -243,7 +242,7 @@ display flex sets default flex-direction as row
 - gap between grids are written as column-gap, row-gap
 - writing "gap" standalone is for both column-gap and row-gap
 
-### grid-template-areas 
+### grid-template-areas
 
 ```css
 .grid {
@@ -294,10 +293,10 @@ display flex sets default flex-direction as row
 .header {
   background-color: gold;
   /* grid-column-start: 1;
-  grid-column-end: 5;*/ 
-  
+  grid-column-end: 5;*/
+
   /* grid-column: 1 / 5; */
-	
+
   grid-column: 1 / -1;
 }
 
@@ -307,21 +306,21 @@ display flex sets default flex-direction as row
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 4;*/
-  
+
   /* grid-column: 1 / 4;
   grid-row: 2 / 4; */
-  
+
   grid-column: 1 / -2;
   grid-row: 2 / span 2;
 }
 
 .nav {
   background-color: orange;
-	/* grid-row-start: 2;
+  /* grid-row-start: 2;
   grid-row-end: 4; */
 
   /* grid-row: 2 / 4; */
-  
+
   grid-row: 2 / span 2;
 }
 
@@ -329,9 +328,9 @@ display flex sets default flex-direction as row
   background-color: purple;
   /* grid-column-start: 1;
   grid-column-end: 5; */
-  
+
   /* grid-column: 1 / 5; */
-  
+
   grid-column: span 4;
 }
 ```
@@ -352,8 +351,6 @@ display flex sets default flex-direction as row
 - stretching elements with span (space numbers)
 - you can mix with starting line and end line
 
-
-
 ### **fr(fraction)**
 
 ```css
@@ -361,7 +358,7 @@ display flex sets default flex-direction as row
   display: grid;
   width: 500px;
   height: 50vh;
-  grid-template-columns: 1fr, 1fr, 1fr, 1fr
+  grid-template-columns: 1fr, 1fr, 1fr, 1fr;
 }
 ```
 
@@ -380,10 +377,10 @@ display flex sets default flex-direction as row
   grid-template:
     /* naming each of cells */
     "header header header header" 1fr /* 1fr is how tall the cells are */
-    "content content content nav" 2fr 
-    "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr; 
-  																		/* width of cells in each 4 rows*/
-  																    /* 4 rows: 1fr + 2fr + 1fr */
+    "content content content nav" 2fr
+    "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr;
+  /* width of cells in each 4 rows*/
+  /* 4 rows: 1fr + 2fr + 1fr */
 }
 
 .header {
@@ -406,8 +403,6 @@ display flex sets default flex-direction as row
   grid-area: footer;
 }
 ```
-
-
 
 ### justify-items & align-items: moving contents within grid
 
@@ -437,8 +432,6 @@ display flex sets default flex-direction as row
 
 - Shortcut for align-items and justify-contents
 
-
-
 ### justify-content & align-content Moving grids as a whole
 
 ```css
@@ -449,7 +442,7 @@ display flex sets default flex-direction as row
   height: 250vh;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(4, 100px);
-	align-content: end;
+  align-content: end;
   justify-content: space-evenly;
 }
 ```
@@ -458,7 +451,7 @@ display flex sets default flex-direction as row
 
 - Grid container is 100% width, which is black background on the note_img/image
 - justify-content and align-content moves **whole grid** within grid container.
-- It is different from justify-items and align-items, since 
+- It is different from justify-items and align-items, since
   -items **only move contents within individual grids.**
 
 ### place-content
@@ -479,7 +472,7 @@ display flex sets default flex-direction as row
 
 - shortcut for align-content & justify-content
 
-### align-self,  justify-self, place-self
+### align-self, justify-self, place-self
 
 ![note_img/image-20200320010117601](note_img/image-20200320010117601.png)
 
@@ -538,13 +531,12 @@ display flex sets default flex-direction as row
 
 ```css
 .grid {
-  ...
-  grid-auto-flow: column;
+  ... grid-auto-flow: column;
   grid-auto-columns: 100px;
 }
 ```
 
-- Used along with grid-auto-flow, keeping size still for overflowed arrayed elements 
+- Used along with grid-auto-flow, keeping size still for overflowed arrayed elements
 
 ### minmax
 
@@ -557,8 +549,6 @@ display flex sets default flex-direction as row
 - setting minimum / maximum size for the grid
 - minimum size can be absolute
 - maximum size can be both absolute or relative
-
-
 
 ## Responsive Design
 
@@ -593,7 +583,7 @@ display flex sets default flex-direction as row
   display: grid;
   gap: 5px;
   /* first picture is grid-auto-rows where two rows are automatically formed */
-  grid-auto-rows: 100px; 
+  grid-auto-rows: 100px;
 }
 
 .grid:last-child {
@@ -613,8 +603,6 @@ display flex sets default flex-direction as row
 }
 ```
 
-
-
 ### max-content
 
 ```css
@@ -624,8 +612,6 @@ display flex sets default flex-direction as row
   grid-auto-rows: 100px;
 }
 ```
-
-
 
 ## SCSS
 
@@ -659,7 +645,7 @@ yarn add gulp gulp-sass gulp-csso node-sass gulp-autoprefixer del -D
   },
 ```
 
-- manually make babelrc file
+- manually make .babelrc file
 
 ```javascript
 {
@@ -669,12 +655,72 @@ yarn add gulp gulp-sass gulp-csso node-sass gulp-autoprefixer del -D
 
 - change (previously created) gulpfile.js -> gulpfile.babel.js
 
-### Testing Environment setup
-
 ```shell
 gulp dev
-yarn dev
+(or yarn dev)
 ```
+
+- Testing Environment setup like above
+- Once running the gulpfile.babel.js, every changes made on styles.scss will be reflected on styles.css, realtime.
+
+### Variables
+
+```scss
+/* _variables.scss */
+$bg: pink;
+```
+
+```scss
+/* styles.scss */
+@import "_variables";
+
+h2 {
+  color: $bg;
+}
+```
+
+- styles.scss is compiled into styles.css
+- _variables.scss is not compiled, only provides variable to styles.scss
+- you can import $variables to styles.scss
+
+### Nesting
+
+```scss
+/* targeting h2 tag */
+h2 {
+  color: $bg;
+}
+
+/* targeting h2 tag under <div class="box"> */
+.box {
+  h2 {
+    color: blue;
+  }
+}
+```
+
+- Targeting specific elements under div class(= "box") elements
+
+```scss
+.box {
+  margin-top: 20px;
+  &:hover {
+    background-color: green;
+  }
+}
+```
+
+```css
+.box {
+  margin-top: 20px;
+}
+.box:hover {
+  background-color: green;
+}
+```
+
+- Targeting div class(= "box") element parellelly 
+  - scss code above is compiled into css code below
 
 
 
@@ -751,9 +797,6 @@ yarn dev
 - [ ] [https://canalstreet.market/](https://canalstreet.market/)
 - [ ] [https://wonhundred.com/](https://wonhundred.com/)
 
-
-
 ## My Questions
 
 - [CSS Units - What is the difference between vh/vw and %?](https://stackoverflow.com/questions/31039979/css-units-what-is-the-difference-between-vh-vw-and)]
-

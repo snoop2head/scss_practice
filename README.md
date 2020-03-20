@@ -97,7 +97,7 @@ display flex sets default flex-direction as row
 - Overrides father flexbox's align-items
 - Child element will move along cross axis
 
-![image-20200319140825251](image-20200319140825251.png)
+![note_img/image-20200319140825251](note_img/image-20200319140825251.png)
 
 ### align-content
 
@@ -111,7 +111,7 @@ display flex sets default flex-direction as row
 
 - **aligning lines (of frogs)** along cross axis
 
-![image-20200319145711708](image-20200319145711708.png)
+![note_img/image-20200319145711708](note_img/image-20200319145711708.png)
 
 ### order
 
@@ -332,7 +332,7 @@ display flex sets default flex-direction as row
 }
 ```
 
-![image-20200319201932056](image-20200319201932056.png)
+![note_img/image-20200319201932056](note_img/image-20200319201932056.png)
 
 **Nominating & Stretching with starting line and end line**
 
@@ -405,7 +405,7 @@ display flex sets default flex-direction as row
 
 ### justify-items & align-items: moving contents within grid
 
-![image-20200320010405495](image-20200320010405495.png)
+![note_img/image-20200320010405495](note_img/image-20200320010405495.png)
 
 ```css
 .grid {
@@ -448,9 +448,9 @@ display flex sets default flex-direction as row
 }
 ```
 
-![image-20200320004540832](image-20200320004540832.png)
+![note_img/image-20200320004540832](note_img/image-20200320004540832.png)
 
-- Grid container is 100% width, which is black background on the image
+- Grid container is 100% width, which is black background on the note_img/image
 - justify-content and align-content moves **whole grid** within grid container.
 - It is different from justify-items and align-items, since 
   -items **only move contents within individual grids.**
@@ -475,7 +475,7 @@ display flex sets default flex-direction as row
 
 ### align-self,  justify-self, place-self
 
-![image-20200320010117601](image-20200320010117601.png)
+![note_img/image-20200320010117601](note_img/image-20200320010117601.png)
 
 ```css
 .item:nth-child(odd) {
@@ -490,7 +490,7 @@ display flex sets default flex-direction as row
 
 ### grid-auto-rows
 
-![image-20200320010849346](image-20200320010849346.png)
+![note_img/image-20200320010849346](note_img/image-20200320010849346.png)
 
 ```css
 .grid {
@@ -509,7 +509,7 @@ display flex sets default flex-direction as row
 
 ### grid-auto-flow
 
-![image-20200320011123184](image-20200320011123184.png)
+![note_img/image-20200320011123184](note_img/image-20200320011123184.png)
 
 ```css
 .grid {
@@ -528,7 +528,7 @@ display flex sets default flex-direction as row
 
 ### grid-auto-columns
 
-![image-20200320011444273](image-20200320011444273.png)
+![note_img/image-20200320011444273](note_img/image-20200320011444273.png)
 
 ```css
 .grid {
@@ -539,6 +539,12 @@ display flex sets default flex-direction as row
 ```
 
 - Used along with grid-auto-flow, keeping size still for overflowed arrayed elements 
+
+### minmax
+
+- setting minimum / maximum size for the grid
+- minimum size can be absolute
+- maximum size can be both absolute or relative
 
 ## Concepts
 

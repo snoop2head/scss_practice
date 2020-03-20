@@ -616,7 +616,7 @@ display flex sets default flex-direction as row
 ## SCSS
 
 - preprocessor for CSS
-- SCSS & Saas is compiled into CSS
+- saas is compiles SCSS into CSS
 - with SCSS, you can make CSS like a programming language
 
 ### [Initialize with npm and yarn](https://youtu.be/DT5uy4n28p8?t=349)
@@ -685,6 +685,18 @@ h2 {
 
 ### Nesting
 
+HTML
+
+```html
+<body>
+    <h2>Title</h2>
+    <div class="box">
+      <h2>subtitle</h2>
+</div>
+```
+
+SCSS
+
 ```scss
 /* targeting h2 tag */
 h2 {
@@ -701,6 +713,8 @@ h2 {
 
 - Targeting specific elements under div class(= "box") elements
 
+SCSS
+
 ```scss
 .box {
   margin-top: 20px;
@@ -709,6 +723,8 @@ h2 {
   }
 }
 ```
+
+CSS
 
 ```css
 .box {
@@ -721,6 +737,46 @@ h2 {
 
 - Targeting div class(= "box") element parellelly 
   - scss code above is compiled into css code below
+
+### Mixins
+
+![image-20200320211917072](image-20200320211917072.png)
+
+_mixins.scss
+
+```scss
+@mixin link($word) {
+  text-decoration: none;
+  display: block;
+  @if $word == "odd" {
+    color: blue;
+  } @else {
+    color: red;
+  }
+}
+```
+
+styles.scss
+
+```css
+@import "_mixins";
+
+a {
+  margin-bottom: 10px;
+
+  &:nth-child(odd) {
+    @include link("odd");
+  }
+
+  &:nth-child(even) {
+    @include link("even");
+  }
+}
+```
+
+
+
+
 
 
 
@@ -777,8 +833,8 @@ h2 {
 
 ## SCSS:
 
-- [ ] Variables
-- [ ] Nesting
+- [x] Variables
+- [x] Nesting
 - [ ] Mixins
 - [ ] Extend
 - [ ] Responsive Mixins

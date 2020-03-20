@@ -503,8 +503,8 @@ display flex sets default flex-direction as row
 }
 ```
 
-- You don't know how much row of grids you should prepare in order to hold data from the server
-- content numbers > rows -> disaster!
+- You don't know how much rows of grids you should prepare in order to hold data from the server
+- if content numbers >>> rows, then disaster!
 - So automatically prepare rows
 
 ### grid-auto-flow
@@ -542,9 +542,60 @@ display flex sets default flex-direction as row
 
 ### minmax
 
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(100px, 1fr));
+```
+
 - setting minimum / maximum size for the grid
 - minimum size can be absolute
 - maximum size can be both absolute or relative
+
+
+
+## Responsive Design
+
+### grid-auto-fill
+
+![image-20200320104321918](image-20200320104321918.png)
+
+```css
+.grid {
+  background: black;
+  display: grid;
+  gap: 5px;
+}
+
+.grid:first-child {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+```
+
+- automatically filling empty spaces with more numbers of grids
+- when receiving numbers of elements are undefined, you can use grid-auto-fill
+
+### grid-auto-fit
+
+![image-20200320104612168](image-20200320104612168.png)
+
+![image-20200320104237520](image-20200320104237520.png)
+
+```css
+.grid {
+  background: black;
+  display: grid;
+  gap: 5px;
+  /* first picture is grid-auto-rows where two rows are automatically formed */
+  grid-auto-rows: 100px; 
+}
+
+.grid:last-child {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+```
+
+- automatically stretching grids to the empty spaces in windows
 
 ## Concepts
 
@@ -591,9 +642,9 @@ display flex sets default flex-direction as row
 
 - [x] repeat
 - [x] fr
-- [ ] minmax
-- [ ] auto-fit
-- [ ] auto-fill
+- [x] minmax
+- [x] auto-fit
+- [x] auto-fill
 - [ ] min-content
 - [ ] max-content
 

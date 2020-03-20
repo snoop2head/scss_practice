@@ -597,6 +597,32 @@ display flex sets default flex-direction as row
 
 - automatically stretching grids to the empty spaces in windows
 
+### min-content
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(min-content, 1fr));
+  grid-auto-rows: 100px;
+}
+```
+
+
+
+### max-content
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20px, max-content));
+  grid-auto-rows: 100px;
+}
+```
+
+
+
+
+
 ## Concepts
 
 - [x] flex-direction

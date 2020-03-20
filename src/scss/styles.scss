@@ -1,13 +1,14 @@
-@import "_buttons";
+@import "_responsive_mixins";
 
-body {
-  background-color: black;
-}
-a {
-  @extend %button;
-  text-decoration: none;
-}
-button {
-  @extend %button;
-  border: none;
+h1 {
+  color: red;
+  @include responsive("iphone-portrait") {
+    color: yellow;
+  }
+  @include responsive("iphone-landscape") {
+    color: blue;
+  }
+  @include responsive("tablet-portrait") {
+    color: green;
+  }
 }

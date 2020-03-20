@@ -564,7 +564,7 @@ display flex sets default flex-direction as row
 
 ### grid-auto-fill
 
-![image-20200320104321918](image-20200320104321918.png)
+![image-20200320104321918](note_img/image-20200320104321918.png)
 
 ```css
 .grid {
@@ -583,9 +583,9 @@ display flex sets default flex-direction as row
 
 ### grid-auto-fit
 
-![image-20200320104612168](image-20200320104612168.png)
+![image-20200320104612168](note_img/image-20200320104612168.png)
 
-![image-20200320104237520](image-20200320104237520.png)
+![image-20200320104237520](note_img/image-20200320104237520.png)
 
 ```css
 .grid {
@@ -624,6 +624,33 @@ display flex sets default flex-direction as row
   grid-auto-rows: 100px;
 }
 ```
+
+
+
+## SCSS
+
+- preprocessor for CSS
+- SCSS & Saas is compiled into CSS
+- with SCSS, you can make CSS like a programming language
+
+### Initialize with npm and yarn
+
+1. [Initialize gulp](https://youtu.be/DT5uy4n28p8?t=349)
+
+```shell
+npm init
+npm install gulp-cli -g
+npm install gulp gulp-sass gulp-csso node-sass gulp-autoprefixer del -D
+npx -p touch nodetouch gulpfile.js
+```
+
+```shell
+yarn add @babel/{register,core}
+yarn add @babel/preset-env
+yarn add gulp gulp-sass gulp-csso node-sass gulp-autoprefixer del -D
+```
+
+2. [adding babel to project instruction](https://academy.nomadcoders.co/courses/575403/lectures/10361247)
 
 
 

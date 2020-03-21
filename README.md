@@ -1,6 +1,6 @@
 # CSS/SCSS Layout: Flexbox & Grid
 
-### Tip
+### Tips
 
 - Just inspect element whenever problem arose
 - On Editor, put cursor on the top of CSS class names, instead of memorizing stuffs
@@ -67,23 +67,23 @@
 - [x] Nesting
 - [x] @mixin
 - [x] @extend
-- [ ] Responsive Mixins
+- [x] Responsive Mixins
 
-## [4. Cloning]()
+## 4. Cloning
 
 - [ ] [https://besthorrorscenes.com/](https://besthorrorscenes.com/)
-- [ ] [https://paint-box.com/](https://paint-box.com/)
+- [ ] **[https://paint-box.com/](https://paint-box.com/)**  
 - [ ] [http://10x19.co/](http://10x19.co/)
-- [ ] [http://www.z-o-o.fr/](http://www.z-o-o.fr/) -> Referencing this website for FitCuration
-- [ ] [https://schwartzmedia.com.au/](https://schwartzmedia.com.au/)
-- [ ] [https://tolv.dk/](https://tolv.dk/)
+- [ ] **[http://www.z-o-o.fr/](http://www.z-o-o.fr/)** 
+- [ ] **[https://schwartzmedia.com.au/](https://schwartzmedia.com.au/)**  
+- [ ] **[https://tolv.dk/](https://tolv.dk/)**
 - [ ] [https://rodicdavidson.co.uk/](https://rodicdavidson.co.uk/)
-- [ ] [https://beige.de/](https://beige.de/)
-- [ ] [http://donicaida.com/](http://donicaida.com/)
-- [ ] [https://canalstreet.market/](https://canalstreet.market/)
+- [ ] **[https://beige.de/](https://beige.de/)**
+- [ ] [http://donicaida.com/](http://donicaida.com/) 
+- [ ] **[https://canalstreet.market/](https://canalstreet.market/)**  
 - [ ] [https://wonhundred.com/](https://wonhundred.com/)
 
 ## 5. My Questions
 
-- [CSS Units - What is the difference between vh/vw and %?](https://stackoverflow.com/questions/31039979/css-units-what-is-the-difference-between-vh-vw-and)]
+- [CSS Units - What is the difference between vh/vw and percent?](https://stackoverflow.com/questions/31039979/css-units-what-is-the-difference-between-vh-vw-and)
 

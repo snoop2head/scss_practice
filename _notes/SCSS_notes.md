@@ -1,10 +1,13 @@
-## SCSS
+## 🥤 SCSS Initialization
 
-- preprocessor for CSS
-- saas is compiles SCSS into CSS
+- SCSS is preprocessor for CSS
+- sass compiles SCSS into CSS
 - with SCSS, you can make CSS like a programming language
 
 ### [Initialize with npm and yarn](https://youtu.be/DT5uy4n28p8?t=349)
+
+- Following commands can initialize scss development environment in other projects also.
+- Dependencies that are limited to this project are described in separate sections
 
 ```shell
 npm init
@@ -15,8 +18,7 @@ npx -p touch nodetouch gulpfile.js
 
 ```shell
 yarn init
-yarn add @babel/{register,core}
-yarn add @babel/preset-env
+yarn add @babel/{register,core,preset-env}
 yarn add gulp gulp-sass gulp-csso node-sass gulp-autoprefixer del -D
 ```
 
@@ -30,7 +32,7 @@ yarn add gulp gulp-sass gulp-csso node-sass gulp-autoprefixer del -D
   },
 ```
 
-- manually make .babelrc file
+- manually make babelrc file
 
 ```javascript
 {
@@ -38,15 +40,27 @@ yarn add gulp gulp-sass gulp-csso node-sass gulp-autoprefixer del -D
 }
 ```
 
-- change (previously created) gulpfile.js -> gulpfile.babel.js
+- change file name of previously created gulpfile.js -> gulpfile.babel.js
+
+### Testing Environment setup
 
 ```shell
 gulp dev
-(or yarn dev)
+yarn dev
 ```
 
 - Testing Environment setup like above
 - Once running the gulpfile.babel.js, every changes made on styles.scss will be reflected on styles.css, realtime.
+
+### 🏁 Import gulp for gulpfile.babel.js
+
+```javasc
+import gulp from "gulp";
+```
+
+
+
+## SCSS Concepts
 
 ### Variables
 
@@ -163,8 +177,6 @@ a {
   - Bourbon
   - Saas mediaqueries
   - Animate.scss
-
-
 
 ### @Extend
 
